@@ -1,0 +1,3 @@
+使用request抓取氣象局網站天氣
+並用Cheerio解析爪取內容
+再用Facebook Chat api 自動傳送天氣給FB的指定用戶
