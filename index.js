@@ -2,17 +2,17 @@ var login = require('facebook-chat-api');
 var getWeather = require('./getweather.js');
 
 var account = {
-	email: 'insane9136@yahoo.com.tw',
-	password: 'love831002'
+	email: '',
+	password: ''
 };
 
-login(account, function(error, api) { // µÇÈë°lËÍÕßµÄFB
-	if(error) console.log(error);  //åeÕ`ÌÀí
+login(account, function(error, api) { // ç™»å…¥ç™¼é€è€…çš„FB
+	if(error) console.log(error);  //éŒ¯èª¤è™•ç†
 
-	var id = 100002530017320; // FB°lËÍÓÏ¢Œ¦Ïóid
+	var id = 100002530017320; // FBç™¼é€è¨Šæ¯å°è±¡id
 	var interval = 25 * 1000; // 5 second
 
-	setInterval(function() {  // ¹Ì¶¨•rég°lËÍ
+	setInterval(function() {  // å›ºå®šæ™‚é–“ç™¼é€
 		getWeather(function(error, weather) {
 			if(error) console.log(error);
 			api.sendMessage(weather, id);
